@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagavad Gita Chapters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+
+        /* Add flexbox container */
+        #main-container {
+            display: flex;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        /* Left column: chapter list */
+        #chapter-links {
+            width: 20%;
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+
+        .chapter-list a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+
+        .chapter-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Right column: verse display */
+        #chapter-display {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .chapter-content {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .verse {
+            margin-bottom: 20px;
+        }
+
+        .verse-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .word-meanings {
+            color: darkgreen;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with language selector -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <h1 style="margin: 0;">Bhagavad Gita Chapters</h1>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-end;">
+            <label for="language-select" style="font-weight: bold; margin-bottom: 4px;">
+                Select Language
+            </label>
+            <select id="language-select" style="padding: 6px 10px; font-size: 14px;">
+                <option value="roman">Roman</option>
+                <option value="devanagari">Devanagari</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Flex container for side-by-side layout -->
+    <div id="main-container">
+        <div id="chapter-links" class="chapter-list"></div>
+        <div id="chapter-display" class="chapter-content"></div>
+    </div>
+
+    <!-- Sanscript for transliteration -->
+    <script src="https://unpkg.com/sanscript"></script>
+    <!-- Your script file -->
+    <script src="script.js"></script>
+</body>
+</html>
